@@ -9,7 +9,7 @@ function Tour(props) {
             <h2>{tour.name}</h2>
             <span>${tour.price}</span>
             <p id={`tour-item-para-${tour.id}`}>{expand?tour.info:tour.info.substr(0,200)}</p>
-            <button onClick={()=>setExpand(!expand)}>{expand ? 'Show Less' : 'Read More'}</button>
+            <button id={`see-more-${tour.id}`} onClick={()=>setExpand(!expand)}>{expand ? 'Show Less' : 'Read More'}</button>
             <button id={`delete-btn-${tour.id}`} onClick={()=>removeTour(tour.id)}>Remove</button>
     </div>
   )
