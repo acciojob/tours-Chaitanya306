@@ -8,9 +8,9 @@ function Tour(props) {
             <img src={tour.image} alt={tour.name} />
             <h2>{tour.name}</h2>
             <span>${tour.price}</span>
-            <p>{expand?tour.info:tour.info.substr(0,200)}</p>
+            <p id={`#tour-item-para-${tour.id}`}>{expand?tour.info:tour.info.substr(0,200)}</p>
             <button onClick={()=>setExpand(!expand)}>{expand ? 'Show Less' : 'Read More'}</button>
-            <button onClick={()=>removeTour(tour.id)}>Remove</button>
+            <button id={`#delete-btn-${tour.id}`} onClick={()=>removeTour(tour.id)}>Remove</button>
     </div>
   )
 }
